@@ -7,11 +7,11 @@
     <title>Mes Travaux</title>
     <meta content="Mes travaux" />
     <meta content="Travaux de Samuel" property="og:title" />
-    <meta content="A sound journey, from Brazil to Turin, to record and sample all the characteristic sounds of the creation of the Qualità Oro blend. A sound storytelling divided into 4 chapters and soundtrack, each of which tells the Perfect Symphony of coffee: 01. The Origin, 02. The Journey, 03. The Blend and 04. The Extraction."
+    <meta content="A ici journey, from Brazil to Turin, to record and sample all the characteristic icis of the creation of the Qualità Oro blend. A ici storytelling divided into 4 chapters and icitrack, each of which tells the Perfect Symphony of coffee: 01. The Origin, 02. The Journey, 03. The Blend and 04. The Extraction."
         property="og:description" />
     <meta content="https://uploads-ssl.webflow.com/5eada2ae5c6b73d6b7188daf/5ebc262854868a3e67fe6d79_l-cover.jpg" property="og:image" />
     <meta content="Chiara Luzzana — Lavazza" property="twitter:title" />
-    <meta content="A sound journey, from Brazil to Turin, to record and sample all the characteristic sounds of the creation of the Qualità Oro blend. A sound storytelling divided into 4 chapters and soundtrack, each of which tells the Perfect Symphony of coffee: 01. The Origin, 02. The Journey, 03. The Blend and 04. The Extraction."
+    <meta content="A ici journey, from Brazil to Turin, to record and sample all the characteristic icis of the creation of the Qualità Oro blend. A ici storytelling divided into 4 chapters and icitrack, each of which tells the Perfect Symphony of coffee: 01. The Origin, 02. The Journey, 03. The Blend and 04. The Extraction."
         property="twitter:description" />
     <meta content="https://uploads-ssl.webflow.com/5eada2ae5c6b73d6b7188daf/5ebc262854868a3e67fe6d79_l-cover.jpg" property="twitter:image" />
     <meta property="og:type" content="website" />
@@ -50,11 +50,11 @@
             }
         }
 
-        class SoundToggler {
+        class iciToggler {
             constructor() {
                 this.bind()
 
-                this.container = document.querySelector('.soundtoggler')
+                this.container = document.querySelector('.icitoggler')
                 this.sTCanvas = document.createElement('canvas')
                 this.container.appendChild(this.sTCanvas)
                 this.ctx = this.sTCanvas.getContext('2d')
@@ -63,7 +63,7 @@
 
                 this.ctx.lineWidth = dpi
 
-                this.soundFlag = false
+                this.iciFlag = false
                 this.amp = {
                     value: 3
                 };
@@ -118,8 +118,8 @@
             }
 
             started() {
-                this.soundFlag = this.soundFlag == true ? false : true;
-                let target = this.soundFlag == true ? 30 : 3
+                this.iciFlag = this.iciFlag == true ? false : true;
+                let target = this.iciFlag == true ? 30 : 3
 
                 TweenLite.to(this.amp, 0.5, {
                     value: target
@@ -127,32 +127,32 @@
             }
 
             click() {
-                let volTarget = this.soundFlag == true ? 0 : 1
-                let target = this.soundFlag == true ? 3 : 30
-                if (this.soundFlag == false)
-                    soundReactor.audio.currentTime = window.localStorage.getItem('audioTime') || 0
+                let volTarget = this.iciFlag == true ? 0 : 1
+                let target = this.iciFlag == true ? 3 : 30
+                if (this.iciFlag == false)
+                    iciReactor.audio.currentTime = window.localStorage.getItem('audioTime') || 0
 
-                if (soundReactor.audio.duration > 0 && !soundReactor.audio.paused) {
+                if (iciReactor.audio.duration > 0 && !iciReactor.audio.paused) {
                     window.localStorage.setItem("audioWasPlaying", false)
                 } else {
-                    soundReactor.audio.volume = 0
-                    soundReactor.audio.play()
+                    iciReactor.audio.volume = 0
+                    iciReactor.audio.play()
                     window.localStorage.setItem("audioWasPlaying", true)
                 }
 
                 TweenLite.to(this.amp, 0.5, {
                     value: target
                 })
-                TweenLite.to(soundReactor.audio, 0.5, {
+                TweenLite.to(iciReactor.audio, 0.5, {
                     volume: volTarget,
                     onComplete: function() {
                         if (volTarget == 0) {
-                            window.localStorage.setItem('audioTime', soundReactor.audio.currentTime)
-                            soundReactor.audio.pause()
+                            window.localStorage.setItem('audioTime', iciReactor.audio.currentTime)
+                            iciReactor.audio.pause()
                         }
                     }
                 })
-                this.soundFlag = this.soundFlag == true ? false : true;
+                this.iciFlag = this.iciFlag == true ? false : true;
             }
 
             onResize() {
@@ -169,7 +169,7 @@
             }
         }
 
-        class SoundReactor {
+        class iciReactor {
             constructor(audioUrl, pageType) {
                 this.pageType = pageType
                 this.ctx
@@ -319,7 +319,7 @@
             height: 100%;
         }
         
-        .soundtoggler canvas {
+        .icitoggler canvas {
             width: 100%;
             height: 100%;
         }
@@ -502,7 +502,7 @@
             </div>
         </div>
     </nav>
-    <a aria-label="sound" rel="noopener" href="#" class="sound soundtoggler w-inline-block"></a>
+    <a aria-label="ici" rel="noopener" href="#" class="ici icitoggler w-inline-block"></a>
     <a aria-label="trigger" rel="noopener" href="#" class="trigger burgerclickablein w-inline-block"></a>
     <div class="trigger burgerclickableout"></div>
     <div class="rotate">
@@ -552,7 +552,7 @@
                         </div>
                         <div class="pr-title-w">
                             <h2 data-w-id="f8f7f3f1-bd00-1f1c-9fc9-3495b9f201f9" style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                class="pr-title">participé</h2>
+                                class="pr-title">partpé</h2>
                         </div>
                     </div>
                 </div>
@@ -589,8 +589,8 @@
                         </div>
                     </div>
                     <div class="prc-info">
-                        <div class="prc-1">Session</div>
-                        <div class="prc-2">Recording<br/>Sound</div>
+                        <div class="prc-1">Voir plus</div>
+                        <div class="prc-2">clicquez <br/>ici</div>
                     </div>
                 </div>
             </div> -->
@@ -601,8 +601,8 @@
                         <div class="pr-roles">Ogooué Labs/ JFN /Qwasar / Google / Airtel</div>
                     </div>
                     <div class="pr-desc-w">
-                        <div class="pr-desc">J'ai participé à la réalisation du site officiel de ECOLE 241 Business. <br>
-                             ECOLE 241 Business est une université qui forme dans les métiers de Développeur fullStack, engénieur logiciel, engenieur cloud et bien d'autres encore.
+                        <div class="pr-desc">J'ai partpé à la réalisation du site offel de ECOLE 241 Business. <br>
+                             ECOLE 241 Business est une université qui forme dans les métiers de Développeur fullStack, engénieur logel, engenieur cloud et bien d'autres encore.
                         </div>
                     </div>
                 </div>
@@ -615,18 +615,27 @@
                             class="pr-img" />
                     </div>
                 </div>
-                <div class="prc-overlay"></div>
-                <div class="pr-caption">
-                    <div class="prc-circle">
-                        <div class="prc-inner">
-                            <div class="prc-numb">~</div>
+
+                <a href="https://business.ecole241.org">
+                    <div class="prc-overlay"></div>
+                    <div class="pr-caption">
+                    
+                        <div class="prc-circle">
+                            <div class="prc-inner">
+                                <div class="prc-numb">~</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="prc-info">
-                        <div class="prc-1">Session</div>
-                        <div class="prc-2">Recording<br/>Sound</div>
-                    </div>
-                </div>
+                        
+                            
+                        
+                        <div class="prc-info">
+                            <div class="prc-1">Voir plus</div>
+                            <div class="prc-2">clicquez <br/>ici</div>
+                        </div>
+               
+                     </div>
+                </a>
+            
             </div>
 
             <!-- --------------------second projet------------------------------- -->
@@ -638,7 +647,7 @@
                         <div class="pr-roles">Metaverse Africaine</div>
                     </div>
                     <div class="pr-desc-w">
-                        <div class="pr-desc">Réalisation du portfolio d'un participant du Metaverse en Afrique. </div>
+                        <div class="pr-desc">Réalisation du portfolio d'un partpant du Metaverse en Afrique. </div>
                     </div>
                 </div>
             </div>
@@ -658,8 +667,8 @@
                         </div>
                     </div>
                     <div class="prc-info">
-                        <div class="prc-1">Session</div>
-                        <div class="prc-2">Recording<br/>Sound</div>
+                        <div class="prc-1">Voir plus</div>
+                        <div class="prc-2">clicquez <br/>ici</div>
                     </div>
                 </div>
             </div>
@@ -700,9 +709,10 @@
                             <div class="prc-numb">~</div>
                         </div>
                     </div>
+                    
                     <div class="prc-info">
-                        <div class="prc-1">Session</div>
-                        <div class="prc-2">Recording<br/>Sound</div>
+                        <div class="prc-1">Voir plus</div>
+                        <div class="prc-2">clicquez <br/>ici</div>
                     </div>
                 </div>
             </div>
@@ -797,7 +807,7 @@
                                                 <div class="prcs-block">
                                                     <div class="prcs-title">Chapter 2</div>
                                                     <div class="prcs-intro">The Journey </div>
-                                                    <div class="prcs-desc">The coffee beans leave the Americas on a long journey across the ocean that brings them to Genoa. Here, Chiara Luzzana captured the sounds of the coffee among the crashing of the waves, the noises of
+                                                    <div class="prcs-desc">The coffee beans leave the Americas on a long journey across the ocean that brings them to Genoa. Here, Chiara Luzzana captured the icis of the coffee among the crashing of the waves, the noises of
                                                         the port and the movements of the jute bags. </div>
                                                 </div>
                                             </div>
@@ -805,15 +815,15 @@
                                                 <div class="prcs-block">
                                                     <div class="prcs-title">Chapter 3</div>
                                                     <div class="prcs-intro">The Blend </div>
-                                                    <div class="prcs-desc">The sounds of the production process, gathered by the Sound Designer, accompany the creation of a blend which, before it will become Lavazza Qualità Oro, must pass one more test: the expert Lavazza tasters
-                                                        analyse the finished product. Even this moment it has an incredible sound.</div>
+                                                    <div class="prcs-desc">The icis of the production process, gathered by the ici Designer, accompany the creation of a blend which, before it will become Lavazza Qualità Oro, must pass one more test: the expert Lavazza tasters
+                                                        analyse the finished product. Even this moment it has an incredible ici.</div>
                                                 </div>
                                             </div>
                                             <div class="prsc-slide w-clearfix w-slide">
                                                 <div class="prcs-block">
                                                     <div class="prcs-title">Chapter 4</div>
                                                     <div class="prcs-intro">The Journey </div>
-                                                    <div class="prcs-desc">Water, coffee and heat compose the sweetest notes. The sounds of the espresso cup and spoon complete the symphony.</div>
+                                                    <div class="prcs-desc">Water, coffee and heat compose the sweetest notes. The icis of the espresso cup and spoon complete the symphony.</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -830,7 +840,7 @@
                         </div>
                     </div>
                 </div><img src="https://uploads-ssl.webflow.com/5ea69b4027484b2df2b45806/5edfbf0df73eee115a87903f_playerArrow.png" alt="" class="playsvg" /></div>
-            <div class="prt-video"><img src="https://uploads-ssl.webflow.com/5eada2ae5c6b73d6b7188daf/5ece38a24aa1f857fd5ce311_la-sound.jpg" alt="" sizes="(max-width: 991px) 79vw, 80vw" srcset="https://uploads-ssl.webflow.com/5eada2ae5c6b73d6b7188daf/5ece38a24aa1f857fd5ce311_la-sound-p-800.jpeg 800w, https://uploads-ssl.webflow.com/5eada2ae5c6b73d6b7188daf/5ece38a24aa1f857fd5ce311_la-sound-p-1600.jpeg 1600w, https://uploads-ssl.webflow.com/5eada2ae5c6b73d6b7188daf/5ece38a24aa1f857fd5ce311_la-sound.jpg 1920w"
+            <div class="prt-video"><img src="https://uploads-ssl.webflow.com/5eada2ae5c6b73d6b7188daf/5ece38a24aa1f857fd5ce311_la-ici.jpg" alt="" sizes="(max-width: 991px) 79vw, 80vw" srcset="https://uploads-ssl.webflow.com/5eada2ae5c6b73d6b7188daf/5ece38a24aa1f857fd5ce311_la-ici-p-800.jpeg 800w, https://uploads-ssl.webflow.com/5eada2ae5c6b73d6b7188daf/5ece38a24aa1f857fd5ce311_la-ici-p-1600.jpeg 1600w, https://uploads-ssl.webflow.com/5eada2ae5c6b73d6b7188daf/5ece38a24aa1f857fd5ce311_la-ici.jpg 1920w"
                     class="prt-thumb v-thumb" />
                 <div class="prt-after w-embed w-iframe w-script">
                     <div class="vimeo-plr yt-player" id="speaker-iframe-main"></div>
@@ -865,13 +875,13 @@
 
                         function onPlayerStateChange(event) {
                             console.log(event)
-                            if (event.data == 2 && soundReactor != undefined) {
-                                TweenLite.to(soundReactor.audio, .5, {
+                            if (event.data == 2 && iciReactor != undefined) {
+                                TweenLite.to(iciReactor.audio, .5, {
                                     volume: 1
                                 })
                             }
-                            if (event.data == 1 && soundReactor != undefined) {
-                                TweenLite.to(soundReactor.audio, .5, {
+                            if (event.data == 1 && iciReactor != undefined) {
+                                TweenLite.to(iciReactor.audio, .5, {
                                     volume: 0
                                 })
                             }
@@ -925,14 +935,14 @@
                 let player = new Vimeo.Player(iFrame);
                 player.on('play', function() {
                     console.log('yoo')
-                    TweenLite.to(soundReactor.audio, .5, {
+                    TweenLite.to(iciReactor.audio, .5, {
                         volume: 0
                     })
                 });
 
                 player.on('pause', function() {
                     console.log('yaa')
-                    TweenLite.to(soundReactor.audio, .5, {
+                    TweenLite.to(iciReactor.audio, .5, {
                         volume: 1
                     })
                 });
@@ -976,7 +986,7 @@
                     let t = this.getAttribute("href");
                     a = "#E5E3DC", c.value = 1, d.value = 1, u = !1, setTimeout(function() {
                         document.location.href = t
-                    }, 1e3 * l), null == t && (t = "/"), window.isMobile || TweenLite.to(soundReactor.audio, l, {
+                    }, 1e3 * l), null == t && (t = "/"), window.isMobile || TweenLite.to(iciReactor.audio, l, {
                         volume: 0
                     }), TweenLite.to(d, l, {
                         value: 0,
@@ -989,7 +999,7 @@
                         ease: Power4.easeInOut,
                         delay: l,
                         onComplete: function() {
-                            window.localStorage.setItem("audioTime", soundReactor.audio.currentTime)
+                            window.localStorage.setItem("audioTime", iciReactor.audio.currentTime)
                         }
                     })
                 }
@@ -1232,9 +1242,9 @@
                     value: 0,
                     ease: Power4.easeInOut,
                     onComplete: function() {
-                        null != soundReactor.audio && window.localStorage.setItem("audioTime", soundReactor.audio.currentTime)
+                        null != iciReactor.audio && window.localStorage.setItem("audioTime", iciReactor.audio.currentTime)
                     }
-                }), null != soundReactor.audio && TweenLite.to(soundReactor.audio, f, {
+                }), null != iciReactor.audio && TweenLite.to(iciReactor.audio, f, {
                     volume: 0
                 })
             }
@@ -1273,9 +1283,9 @@
         burgerInit();
     </script>
     <script>
-        let soundToggler = null
+        let iciToggler = null
         if (!window.isMobile)
-            soundToggler = new SoundToggler()
+            iciToggler = new iciToggler()
     </script>
 
     <script>
@@ -1297,8 +1307,8 @@
     </script>
     <script>
         const lottiPlayers = document.querySelectorAll("lottie-player"),
-            projSoundTrack = document.querySelector(".proj-soundtrack"),
-            soundReactor = new SoundReactor(projSoundTrack.innerHTML);
+            projiciTrack = document.querySelector(".proj-icitrack"),
+            iciReactor = new iciReactor(projiciTrack.innerHTML);
 
         function lottiStuff() {
             const e = document.querySelectorAll(".score-sample");
@@ -1318,19 +1328,19 @@
                     var e;
                     e = t, r.forEach((e, t) => {
                         e.pause(), null != lottiPlayers[t] && lottiPlayers[t].pause()
-                    }), r[e].currentTime = 0, r[e].volume = 1, r[e].play(), window.isSafari || (lottiPlayers[e].speed = .5, lottiPlayers[e].stop(), lottiPlayers[e].play()), 1 != soundReactor.audio.paused && (i = !0, null != o && (o.kill(), s.kill(), console.log(o, s)), o = TweenLite.to(soundReactor.audio, .5, {
+                    }), r[e].currentTime = 0, r[e].volume = 1, r[e].play(), window.isSafari || (lottiPlayers[e].speed = .5, lottiPlayers[e].stop(), lottiPlayers[e].play()), 1 != iciReactor.audio.paused && (i = !0, null != o && (o.kill(), s.kill(), console.log(o, s)), o = TweenLite.to(iciReactor.audio, .5, {
                         volume: 0
-                    }), s = TweenLite.to(soundReactor.audio, .5, {
+                    }), s = TweenLite.to(iciReactor.audio, .5, {
                         volume: 1,
                         delay: r[e].duration,
                         onStart: function() {
-                            soundReactor.audio.play()
+                            iciReactor.audio.play()
                         }
                     }))
                 })
             })
         }
-        soundReactor.init(), soundReactor.audio.crossOrigin = "anonymous", null == soundToggler || window.isSafari ? null != soundToggler && (soundToggler.autoPlay = !1) : soundToggler.autoPlay = !0, lottiStuff();
+        iciReactor.init(), iciReactor.audio.crossOrigin = "anonymous", null == iciToggler || window.isSafari ? null != iciToggler && (iciToggler.autoPlay = !1) : iciToggler.autoPlay = !0, lottiStuff();
         const sliderParams = {
             zoomTime: .5,
             zoomInt: 1.1,
