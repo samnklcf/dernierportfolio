@@ -1290,15 +1290,7 @@
 
     <script>
         let customCursor
-        if (!window.isMobile) {
-            customCursor = new CustomCursor()
-            customCursor.customCursorInit(document.querySelector('.cursorcontainer'))
-            const links = document.querySelectorAll('a')
-            links.forEach(a => {
-                a.addEventListener('mouseenter', customCursor.aIn)
-                a.addEventListener('mouseleave', customCursor.aOut)
-            });
-        }
+        //mobile ici----
         window.onpageshow = function(event) {
             if (event.persisted) {
                 window.location.reload();
