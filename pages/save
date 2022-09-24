@@ -1,9 +1,0 @@
-if (!window.isMobile) {
-            customCursor = new CustomCursor()
-            customCursor.customCursorInit(document.querySelector('.cursorcontainer'))
-            const links = document.querySelectorAll('a')
-            links.forEach(a => {
-                a.addEventListener('mouseenter', customCursor.aIn)
-                a.addEventListener('mouseleave', customCursor.aOut)
-            });
-        }
