@@ -7,52 +7,67 @@ const techStack = [
   {
     langImage: "assets/images/techstack-page/html.png",
     langName: "HyperText Markup Language",
-    langDesc: "<li>The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser</li>",
+    langDesc: "<li>Le language incontournable du Web</li>",
   },
   {
     langImage: "assets/images/techstack-page/css.png",
     langName: "Cascading Style Sheets",
-    langDesc: "<li>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML</li>",
+    langDesc: "<li>Permet de styliser le html</li>",
   },
   {
     langImage: "assets/images/techstack-page/javascript.png",
     langName: "JavaScript",
-    langDesc: "<li>JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS</li>",
+    langDesc: "<li>Ajoute du dynamisme côté client</li>",
   },
   {
     langImage: "assets/images/techstack-page/node.png",
     langName: "Node",
-    langDesc: "<li>Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser</li>",
+    langDesc: "<li>Node. js sert à faire du Javascript server side, et peut être utilisé dans des applications de bases de données.</li>",
   },
   {
     langImage: "assets/images/techstack-page/python.png",
     langName: "Python",
-    langDesc: "<li>Python is an interpreted high-level general-purpose programming language</li>",
+    langDesc: "<li>Python est un langage de programmation interprété, multiparadigme et multiplateformes.</li>",
   },
   {
-    langImage: "assets/images/techstack-page/cpp.png",
-    langName: "C++",
-    langDesc: "<li>C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, or C with Classes</li>",
+    langImage: "assets/images/techstack-page/express.js.png",
+    langName: "Express Js",
+    langDesc: "<li>Express Web Framework Node js Express est une infrastructure d'application (framework), écrit en JavaScript et hébergée dans l'environnement d'exécution node. js</li>",
   },
   {
     langImage: "assets/images/techstack-page/git.png",
     langName: "Git",
-    langDesc: "<li>Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development.</li>",
+    langDesc: "<li>Git est un logiciel de gestion de versions décentralisé. Git permet donc de travailler de manière collaborative.</li>",
   },
   {
     langImage: "assets/images/techstack-page/bootstrap.png",
     langName: "Bootstrap",
-    langDesc: "<li>Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development</li>",
+    langDesc: "<li>Bootstrap est un framework de frontend gratuit qui devient de plus en plus populaire parmi les développeurs de frontend</li>",
   },
   {
     langImage: "assets/images/techstack-page/react.png",
     langName: "React",
-    langDesc: "<li>React is a free and open-source front-end JavaScript library for building user interfaces based on UI components</li>",
+    langDesc: "<li>React Js est une bibliothèque JavaScript libre développée par Facebook depuis 2013.</li>",
   },
   {
-    langImage:"assets/images/techstack-page/c.png",
-    langName:"C",
-    langDesc:"<li>C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, with a static type system</li>"
+    langImage:"assets/images/techstack-page/Electron.svg.png",
+    langName:"Electron Js",
+    langDesc:"<li>Ce framework permet de créer des logiciels bureau robustes</li>"
+  },
+  {
+    langImage:"assets/images/techstack-page/django.png",
+    langName:"Django",
+    langDesc:"<li>Django permet de créer des applications web dynamiques et robustes</li>"
+  },
+  {
+    langImage:"assets/images/techstack-page/djangorest.png",
+    langName:"Django",
+    langDesc:"<li>Django permet de créer des API</li>"
+  },
+  {
+    langImage:"assets/images/techstack-page/php.jpeg",
+    langName:"PHP",
+    langDesc:"<li>PHP permet de créer des applications web dynamiques <br> <b>(En cours d'apprentissage...)</b></li>"
   },
 ];
 
